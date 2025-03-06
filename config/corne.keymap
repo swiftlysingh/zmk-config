@@ -14,8 +14,13 @@
 
         sleep {
             bindings = <&kp ESCAPE>;
-            key-positions = <5 6>;
+            key-positions = <7 4>;
             layers = <0>;
+        };
+
+        screenshot {
+            bindings = <&kp RG(RS(NUMBER_4))>;
+            key-positions = <16 19>;
         };
     };
 
@@ -84,10 +89,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC    &kp C_VOLUME_UP    &trans          &kp UP_ARROW    &trans           &bt BT_SEL 0    &trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0            &kp BSPC
-&trans     &kp K_MUTE         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &bt BT_SEL 1    &trans   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACE    &kp RIGHT_BRACE
-&kp LSHFT  &kp C_VOLUME_DOWN  &kp C_PREV      &kp C_PLAY      &kp C_NEXT       &trans          &trans   &kp N7        &kp N8        &kp N9        &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-                                              &kp LGUI        &trans           &kp SPACE       &kp RET  &trans        &kp RALT
+&kp ESC  &kp C_VOLUME_UP    &trans          &kp UP_ARROW    &trans           &bt BT_SEL 0    &trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0            &kp BSPC
+&trans   &kp K_MUTE         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &bt BT_SEL 1    &trans   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACE    &kp RIGHT_BRACE
+&trans   &kp C_VOLUME_DOWN  &kp C_PREV      &kp C_PLAY      &kp C_NEXT       &trans          &trans   &kp N7        &kp N8        &kp N9        &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+                                            &trans          &trans           &kp SPACE       &kp RET  &trans        &kp RCTRL
             >;
         };
 
