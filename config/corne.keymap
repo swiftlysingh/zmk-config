@@ -14,7 +14,7 @@
 
         sleep {
             bindings = <&kp ESCAPE>;
-            key-positions = <7 4>;
+            key-positions = <17 18>;
             layers = <0>;
         };
 
@@ -58,8 +58,7 @@
         hyper: hyper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LS(LC(LEFT_GUI)))>, <&macro_press>;
-
+            bindings = <&kt LC(LA(LS(LEFT_GUI)))>;
             label = "HYPER";
         };
     };
@@ -75,10 +74,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC  &kp Q         &kp W         &kp E            &kp R            &kp T        &kp Y      &kp U             &kp I             &kp O         &kp P                  &kp BSPC
-&kp TAB  &hml LSHFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G        &kp H      &hmr RIGHT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &hmr RIGHT_SHIFT SEMI  &trans
-&kp DEL  &kp Z         &kp X         &kp C            &kp V            &kp B        &kp N      &kp M             &kp COMMA         &kp DOT       &kp FSLH               &kp ENTER
-                                     &hyper           &mo 1            &kp SPACE    &kp SPACE  &mo 2             &kp TILDE
+&kp TILDE  &kp Q         &kp W         &kp E            &kp R            &kp T        &kp Y      &kp U             &kp I             &kp O         &kp P                  &kp BSPC
+&kp TAB    &hml LSHFT A  &hml LCTRL S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G        &kp H      &hmr RIGHT_GUI J  &hmr RIGHT_ALT K  &hmr RCTRL L  &hmr RIGHT_SHIFT SEMI  &trans
+&kp DEL    &kp Z         &kp X         &kp C            &kp V            &kp B        &kp N      &kp M             &kp COMMA         &kp DOT       &kp FSLH               &kp ENTER
+                                       &hyper           &mo 1            &kp SPACE    &kp SPACE  &mo 2             &trans
             >;
         };
 
