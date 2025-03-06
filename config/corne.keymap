@@ -13,7 +13,7 @@
         compatible = "zmk,combos";
 
         sleep {
-            bindings = <&kp C_SLEEP>;
+            bindings = <&kp LA(LG(C_SLEEP))>;
             key-positions = <11 0>;
             layers = <0>;
         };
@@ -30,7 +30,22 @@
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <12 13 14 15 16 17 18 19 20 21 22 23>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 38 39 40 41 37 36>;
+            require-prior-idle-ms = <150>;
+        };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
         };
     };
 
@@ -46,7 +61,7 @@
 
             bindings = <
 &kp ESC  &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y      &kp U         &kp I         &kp O         &kp P               &kp BSPC
-&kp TAB  &hmr LSHFT A  &hmr LC(S) S  &hmr LA(D) D  &hmr LG(F) F  &kp G        &kp H      &hmr RG(J) J  &hmr LA(K) K  &hmr RC(L) L  &hmr RS(SEMI) SEMI  &trans
+&kp TAB  &hml LSHFT A  &hml LC(S) S  &hml LA(D) D  &hml LG(F) F  &kp G        &kp H      &hmr RG(J) J  &hmr LA(K) K  &hmr RC(L) L  &hmr RS(SEMI) SEMI  &trans
 &kp DEL  &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N      &kp M         &kp COMMA     &kp DOT       &kp FSLH            &kp ENTER
                                      &kp TILDE     &mo 1         &kp SPACE    &kp SPACE  &mo 2         &trans
             >;
