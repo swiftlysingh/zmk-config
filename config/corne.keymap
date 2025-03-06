@@ -58,7 +58,8 @@
         hyper: hyper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LEFT_GUI)))>;
+            bindings = <&kp LA(LS(LC(LEFT_GUI)))>, <&macro_press>;
+
             label = "HYPER";
         };
     };
